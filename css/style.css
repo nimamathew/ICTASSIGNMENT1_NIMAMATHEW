@@ -162,8 +162,8 @@ body{
 .grid-container {
     display: grid;
     grid-template-columns: auto auto auto auto;
-    gap: 10px;
-    background-color: #d8f7f7;
+    gap: 20px;
+    background-color: rgb(181, 133, 177) ;
     padding: 10px;
    
     
@@ -194,7 +194,7 @@ body{
  
  .keralamap {
   background-color: #3b414000; 
-  border: 2px solid rgb(225, 213, 236);
+  border: 2px solid rgb(181, 133, 177) ;
  }
  #more {display: none;}
 
