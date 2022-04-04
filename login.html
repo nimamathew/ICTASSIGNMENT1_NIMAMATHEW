@@ -51,18 +51,19 @@
   <div class="container col-sm-4" >
     <div class="column">
 
-  <form style="margin: 2ex; width: 390px; ">
+  <form style="margin: 2ex; width: 390px;" action="index.html" onsubmit="return validate()" >
     <div class="col-auto">
    
       <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="enter your email address" aria-describedby="emailHelp">
+      <input type="email" required class="form-control" id="email" placeholder="enter your email address" >
+       
       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
     
     </div>
     <br>
     <div class="col-auto">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="password">
+      <input type="password" required class="form-control" id="pwd" placeholder="password" >
     </div>
   <br>
     <div class="col-auto">
@@ -71,7 +72,7 @@
     </div>
     <br>
     <div class="d-grid col-6 mx-auto p-3">
-      <button class="btn btn-primary" type="button">Submitt</button>
+      <button class="btn btn-primary" id="submit" type="button">Submitt</button>
       </div>
   </form>
     </div>
@@ -134,7 +135,6 @@
 </div>
 <!--Footer ends-->
 
-    <!-- <div class="col-lg-3 myMargin"></div>
-    <div class="col-lg-3 myMargin"></div> -->
+<script src="main.js"></script>
 </body>
 </html>

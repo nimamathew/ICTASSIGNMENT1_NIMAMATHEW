@@ -51,7 +51,7 @@
     
         <div class="container col-sm-4" >
           <div class="column">
-            <form class="well form-horizontal" action=" " method="post"  id="contact_form">
+            <form class="well form-horizontal" action="district.html" method="post"  id="contact_form" onsubmit="return validation()">
         <fieldset>
         
         <!-- Form Name -->
@@ -381,7 +381,10 @@
             <div class="col-md-6 inputGroupContainer">
             <div class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-          <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+          <input name="email" required id="email" placeholder="E-Mail Address" class="form-control"  type="text">
+          <br>
+          <br>
+          <label for="error" id="error"></label>
             </div>
           </div>
         </div>
@@ -408,7 +411,7 @@
         <div class="form-group pb-3">
           <label class="col-md-6 control-label"></label>
           <div class="col-md-6"><br>
-            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+          <button type="submit" class="btn btn-warning" >SUBMIT <span class="glyphicon glyphicon-send"></span></button>
           </div>
         </div>
         
