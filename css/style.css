@@ -205,3 +205,11 @@ body{
     border: 2px solid purple;
      padding : 2px;
  }
+
+.form-group span{
+  position: absolute;
+  right : 17px;
+  font : size 14px; 
+  color : red;
+
+}
