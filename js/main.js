@@ -1,35 +1,5 @@
-// function myFunction() {
-//     var dots = document.getElementById("dots");
-//     var moreText = document.getElementById("more");
-//     var btnText = document.getElementById("myBtn");
-  
-//     if (dots.style.display === "none") {
-//       dots.style.display = "inline";
-//       btnText.innerHTML = "Read more";
-//       moreText.style.display = "none";
-//     } 
-//     else {
-//       dots.style.display = "none";
-//       btnText.innerHTML = "Read less";
-//       moreText.style.display = "inline";
-//     }
-// }
+var first_name=document.getElementById("firstname");
 
-    // function validate(){
-    //   let email=document.getElementById("exampleInputEmail1");
-    //   let pwd  =document.getElementById("exampleInputPassword1");
-
-    //   if(email.value==""){
-    //   alert("Please enter email");
-    //   return false;
-    // }
-    // else if(pwd.value==""){
-    //   alert("Please enter password");
-    //   return false;
-    // }
-    // else if(){
-
-    // }
 
    function validate()
    {
