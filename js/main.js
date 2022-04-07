@@ -1,4 +1,32 @@
-var first_name=document.getElementById("firstname");
+   
+    var name_error=document.getElementById("name_error");
+
+    function validteName(){
+        var first_name=document.getElementById("firstname").value;
+      
+        if(first_name.length==0){
+            name_error.innerHTML="First Name is mandatory";
+            return false;
+        }
+    if(first_name.match(/^[\.,_*&%]$/)){
+
+            name_error.innerHTML="First Name is not valid";
+            return false;
+
+        }
+        if(first_name.length>8){
+            name_error.innerHTML="First name should not be greater than 8";
+            return false;
+        }
+
+        name_error.innerHTML="valid";
+        return true;
+
+    }
+    
+
+
+
 
 
    function validate()
