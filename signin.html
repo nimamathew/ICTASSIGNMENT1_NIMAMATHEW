@@ -64,7 +64,7 @@
              <label for="fullname">First Name</label>
           <div class="col-md-6 inputGroupContainer" >
             <div class="input-group">
-               <input type="text" required placeholder="Enter your Name" id="firstname" class="form-control" onkeyup="validteName()"> 
+               <input type="text" required placeholder="Enter your Name" id="firstname" class="form-control" onkeydown="validateName()"> 
             </div>
               <span id ="name_error"></span>
           </div>  
@@ -76,7 +76,7 @@
             <label for="email">E-Mail</label>
          <div class="col-md-6 inputGroupContainer" >
            <div class="input-group">
-              <input type="email" required placeholder="Enter your email" id="email" class="form-control" onkeyup="validteEmail()"> 
+              <input type="email" required placeholder="Enter your email" id="email" class="form-control" onkeydown="validateEmail()"> 
            </div>
              <span id ="email_error"></span>
          </div>  
@@ -89,7 +89,7 @@
           <label for="fullname">User Name</label>
        <div class="col-md-6 inputGroupContainer" >
          <div class="input-group">
-            <input type="text" required placeholder="Enter your UserName" id="username" class="form-control" onkeyup="validteUserName()"> 
+            <input type="text" required placeholder="Enter your UserName" id="username" class="form-control" onkeydown="validateUserName()"> 
          </div>
            <span id ="username_error"></span>
        </div>  
@@ -211,7 +211,7 @@
 </div>
 <!--Footer ends-->
 
-<script src="./js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
 
