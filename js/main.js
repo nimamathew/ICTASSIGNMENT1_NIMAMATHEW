@@ -8,14 +8,15 @@
             name_error.innerHTML="First Name is mandatory";
             return false;
         }
-    if(first_name.match(/^[\.,_*&%]$/)){
+    if(!first_name.match(/^[\w]+$/)){
 
             name_error.innerHTML="First Name is not valid";
+            name_error.innerHTML="only alphanumeric characters allowed";
             return false;
 
         }
-        if(first_name.length>8){
-            name_error.innerHTML="First name should not be greater than 8";
+        if(first_name.length>10){
+            name_error.innerHTML="First name should not be greater than 11";
             return false;
         }
 
