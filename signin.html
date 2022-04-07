@@ -59,19 +59,7 @@
         <legend><center><h2><b>Sign in Form</b></h2></center></legend><br>
         
         <!-- Text input-->
-        
-        <!-- <div class="form-group">
-          <label class="col-md-6 control-label"><STRONG>First Name</STRONG></label>  
-          <div class="col-md-6 inputGroupContainer">
-          <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-          <input  name="first_name" required placeholder="First Name" class="form-control"  type="text">
-            </div>
-          </div>
-        </div> -->
-
-        <!-- Text input  First Name-->
-       
+             
         <div class="form-group">
              <label for="fullname">First Name</label>
           <div class="col-md-6 inputGroupContainer" >
@@ -82,31 +70,31 @@
           </div>  
         </div>
          <br>
-          <!-- Text input-->
+      
+<!-- Text input  email-->
           <div class="form-group">
-            <label class="col-md-6 control-label">E-Mail</label>  
-              <div class="col-md-6 inputGroupContainer">
-              <div class="input-group">
-                  <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-            <input name="email" required id="email" placeholder="E-Mail Address" class="form-control"  type="text">
-            <br>
-            <br>
-            <label for="error" id="error"></label>
-              </div>
-            </div>
-          </div>
+            <label for="email">E-Mail</label>
+         <div class="col-md-6 inputGroupContainer" >
+           <div class="input-group">
+              <input type="email" required placeholder="Enter your email" id="email" class="form-control" onkeyup="validteEmail()"> 
+           </div>
+             <span id ="email_error"></span>
+         </div>  
+       </div>
+        <br>
 
-        <!-- Text input-->
+        <!-- Text input username-->
         
         <div class="form-group">
-          <label class="col-md-6 control-label">Username</label>  
-          <div class="col-md-6 inputGroupContainer">
-          <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-          <input  name="user_name" required placeholder="Username" class="form-control"  type="text">
-            </div>
-          </div>
-        </div>
+          <label for="fullname">User Name</label>
+       <div class="col-md-6 inputGroupContainer" >
+         <div class="input-group">
+            <input type="text" required placeholder="Enter your UserName" id="username" class="form-control" onkeyup="validteUserName()"> 
+         </div>
+           <span id ="username_error"></span>
+       </div>  
+     </div>
+      <br>
         
         <!-- Text input-->
         
