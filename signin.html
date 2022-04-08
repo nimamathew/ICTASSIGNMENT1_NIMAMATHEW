@@ -96,30 +96,30 @@
      </div>
       <br>
         
-        <!-- Text input-->
+        <!-- Text input PASSWORD-->
+                   
+        <div class="form-group">
+          <label for="fullname">Password </label>
+       <div class="col-md-6 inputGroupContainer" >
+         <div class="input-group">
+            <input type="password" required placeholder="Enter password" id="password" class="form-control" onkeydown="validatePassword()"> 
+         </div>
+           <span id ="password_error"></span>
+       </div>  
+     </div>
+      <br>
+        <!-- Text input confirm password-->
         
         <div class="form-group">
-          <label class="col-md-6 control-label" >Password</label> 
-            <div class="col-md-6 inputGroupContainer">
-            <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-          <input name="user_password" required placeholder="Password" class="form-control"  type="password">
-            </div>
-          </div>
-        </div>
-        
-        <!-- Text input-->
-        
-        <div class="form-group">
-          <label class="col-md-6 control-label" >Confirm Password</label> 
-            <div class="col-md-6 inputGroupContainer">
-            <div class="input-group">
-          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-          <input name="confirm_password" required placeholder="Confirm Password" class="form-control"  type="password">
-            </div>
-          </div>
-        </div>
-        
+          <label for="fullname">Confirm Password </label>
+       <div class="col-md-6 inputGroupContainer" >
+         <div class="input-group">
+            <input type="password" required placeholder="Re-enter password" id="confirmpwd" class="form-control" onkeydown="validaterePassword()"> 
+         </div>
+           <span id ="confirmpwd_error"></span>
+       </div>  
+     </div>
+      <br>
       
         <!-- Text input-->
                

@@ -39,7 +39,7 @@
    function validateEmail()
    {
        var email = document.getElementById("email").value;
-       console.log(email);
+       
        var email_error = document.getElementById("email_error");
 
     //    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -48,7 +48,7 @@
 
        if (validRegex.test(email))
        {
-           console.log("inside first if condition");
+           
         email_error.innerHTML="valid";
         email_error.style.color="green";
         // alert("Valid email address!");
@@ -89,12 +89,51 @@
         username_error.style.color="red";
         return false;
     }
-
+    
     username_error.innerHTML="valid";
     username_error.style.color="green";
     return true;
    }
 
+function validatePassword()
+{
 
+    var password = document.getElementById("password").value;
+    var password_error =document.getElementById("password_error");
+
+    var regexp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/ ;
+
+    if (regexp.test(password))
+    {
+        password_error.innerHTML="valid";
+        password_error.style.color="green";
+        return true;
+
+    }
+   
+    password_error.innerHTML="Password is not valid";
+    password_error.innerHTML="Minimum 8 characters, at least one uppercase, and one lower case, must contain at least one number";
+    password_error.style.color="red";
+    return false;
+}
 //    PASSWORD
 //    "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+
+function validaterePassword(){
+    var password = document.getElementById("password").value;
+    var repassword =document.getElementById("confirmpwd").value;
+    var confirmpwd_error =document.getElementById("confirmpwd_error");
+
+    if (password ==  repassword)
+    {
+        confirmpwd_error.innerHTML="valid passwords are matching";
+        confirmpwd_error.style.color="green";
+        return true;
+
+    }
+   
+        confirmpwd_error.innerHTML=" passwords are not matching";
+        confirmpwd_error.style.color="red";
+        return false;
+
+}
