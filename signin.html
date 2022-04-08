@@ -61,7 +61,7 @@
         <!-- Text input-->
              
         <div class="form-group">
-             <label for="fullname">First Name</label>
+             <label for="firstname">First Name</label>
           <div class="col-md-6 inputGroupContainer" >
             <div class="input-group">
                <input type="text" required placeholder="Enter your Name" id="firstname" class="form-control" onkeydown="validateName()"> 
@@ -86,7 +86,7 @@
         <!-- Text input username-->
         
         <div class="form-group">
-          <label for="fullname">User Name</label>
+          <label for="username">User Name</label>
        <div class="col-md-6 inputGroupContainer" >
          <div class="input-group">
             <input type="text" required placeholder="Enter your UserName" id="username" class="form-control" onkeydown="validateUserName()"> 
@@ -99,12 +99,13 @@
         <!-- Text input PASSWORD-->
                    
         <div class="form-group">
-          <label for="fullname">Password </label>
+          <label for="password">Password </label> 
        <div class="col-md-6 inputGroupContainer" >
          <div class="input-group">
             <input type="password" required placeholder="Enter password" id="password" class="form-control" onkeyup="CheckPasswordStrength(this.value)" onkeydown="validatePassword()"> 
          </div>
-                   <span id="password_strength"></span>
+                             
+                <span id="password_strength"></span>
                    <br>
            <span id ="password_error"></span>
        </div>  
@@ -113,7 +114,7 @@
         <!-- Text input confirm password-->
         
         <div class="form-group">
-          <label for="fullname">Confirm Password </label>
+          <label for="re-password">Confirm Password </label>
        <div class="col-md-6 inputGroupContainer" >
          <div class="input-group">
             <input type="password" required placeholder="Re-enter password" id="confirmpwd" class="form-control"  onkeydown="validaterePassword()"> 
@@ -125,7 +126,7 @@
       
         <!-- Text input-->
                
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label class="col-md-6 control-label">Contact No.</label>  
             <div class="col-md-6 inputGroupContainer">
             <div class="input-group">
@@ -133,7 +134,19 @@
           <input name="contact_no" required placeholder="(639)" class="form-control" type="text">
             </div>
           </div>
-        </div>
+        </div> -->
+
+
+        <div class="form-group">
+          <label for="Contact No">Contact No </label>
+       <div class="col-md-6 inputGroupContainer" >
+         <div class="input-group">
+            <input type="number" required placeholder="XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX" id="contactno" class="form-control"  onkeydown="validatecontactno()"> 
+         </div>
+           <span id ="contactno_error"></span>
+       </div>  
+     </div>
+      <br>
         
         <!-- Select Basic -->
         
