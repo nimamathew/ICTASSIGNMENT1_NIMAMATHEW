@@ -4,13 +4,15 @@
         var first_name = document.getElementById("firstname").value;
         var name_error = document.getElementById("name_error");
        
-         if(first_name.length==0){
+         if(first_name.length==0)
+         {
            
             name_error.innerHTML="First Name is mandatory";
             name_error.style.color="red";
             return false;
-        }
-        if(!first_name.match(/^[A-za-z]+$/)){
+        }   
+        if(!first_name.match(/^[A-za-z]+$/))
+        {
 
             name_error.innerHTML="First Name is not valid";
             name_error.innerHTML="only alphabets are allowed";
@@ -18,15 +20,18 @@
             return false;
 
         }
-        if(first_name.length>10){
+        if(first_name.length>10)
+        {
             name_error.innerHTML="First name should not be greater than 11";
             name_error.style.color="red";
             return false;
         }
-
+      else 
+      {
         name_error.innerHTML="valid";
         name_error.style.color="green";
         return true;
+      }
 
     }
     
@@ -34,22 +39,28 @@
    function validateEmail()
    {
        var email = document.getElementById("email").value;
+       console.log(email);
        var email_error = document.getElementById("email_error");
 
-       var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    //    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    var validRegex= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3}?)$/;
 
-       if (email.value.match(validRegex))
+
+       if (validRegex.test(email))
        {
+           console.log("inside first if condition");
         email_error.innerHTML="valid";
         email_error.style.color="green";
         // alert("Valid email address!");
         return true;
       }
-    else 
-
+     else      
+     {
+       console.log("inside else condition");
         email_error.innerHTML="invalid";
         email_error.style.color="red";
         return false;
+     }
    
    }
 
