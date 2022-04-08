@@ -102,8 +102,10 @@
           <label for="fullname">Password </label>
        <div class="col-md-6 inputGroupContainer" >
          <div class="input-group">
-            <input type="password" required placeholder="Enter password" id="password" class="form-control" onkeydown="validatePassword()"> 
+            <input type="password" required placeholder="Enter password" id="password" class="form-control" onkeyup="CheckPasswordStrength(this.value)" onkeydown="validatePassword()"> 
          </div>
+                   <span id="password_strength"></span>
+                   <br>
            <span id ="password_error"></span>
        </div>  
      </div>
@@ -114,7 +116,7 @@
           <label for="fullname">Confirm Password </label>
        <div class="col-md-6 inputGroupContainer" >
          <div class="input-group">
-            <input type="password" required placeholder="Re-enter password" id="confirmpwd" class="form-control" onkeydown="validaterePassword()"> 
+            <input type="password" required placeholder="Re-enter password" id="confirmpwd" class="form-control"  onkeydown="validaterePassword()"> 
          </div>
            <span id ="confirmpwd_error"></span>
        </div>  
