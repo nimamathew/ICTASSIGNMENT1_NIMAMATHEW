@@ -85,7 +85,7 @@
 
     }
     if(user_name.length>7){
-        username_error.innerHTML="User name should not be greater than 6";
+        username_error.innerHTML="User name should not be greater than 6 charater";
         username_error.style.color="red";
         return false;
     }
@@ -173,9 +173,14 @@ function validatePassword()
         return true;
 
     }
-   
+    if(password.length > 8){
+        password_error.innerHTML="More than 8 characters not allowed";
+        password_error.style.color="red";
+        return false;
+        
+    }
     password_error.innerHTML="Password is not valid";
-    password_error.innerHTML="Minimum 8 characters, at least one uppercase, and one lower case, must contain at least one number";
+    password_error.innerHTML=" Atleast one uppercase,One lowercase and atleast one number must contain";
     password_error.style.color="red";
     return false;
 }
@@ -187,16 +192,52 @@ function validaterePassword(){
     var repassword =document.getElementById("confirmpwd").value;
     var confirmpwd_error =document.getElementById("confirmpwd_error");
 
-    if (password ==  repassword)
+    
+     if(repassword=="")
+     {
+        confirmpwd_error.innerHTML=" Null value is not allowed";
+        confirmpwd_error.style.color="red";
+        return false;
+
+     }
+     if (password == repassword)
     {
         confirmpwd_error.innerHTML="valid passwords are matching";
         confirmpwd_error.style.color="green";
         return true;
 
     }
-   
         confirmpwd_error.innerHTML=" passwords are not matching";
         confirmpwd_error.style.color="red";
         return false;
 
 }
+
+function validateContactno()
+{
+    var contactno = document.getElementById("contactno");
+    var contactno_error = document.getElementById("contactno_error");
+
+    var regexpphoenum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+    // var regexp= /^\d{10}$/;
+    
+             
+    if (regexpphoenum.test(contactno.value))
+        {
+            contactno_error.innerHTML="contact number is valid";
+            contactno_error.style.color="green";
+            return true;
+           
+        }
+       
+     else {
+            contactno_error.innerHTML="format is not correct";
+            contactno_error.innerHTML="contact number should be in one of the  XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX format";
+            
+            contactno_error.style.color="red";
+            return false;
+        }
+    
+    
+   }
+    
