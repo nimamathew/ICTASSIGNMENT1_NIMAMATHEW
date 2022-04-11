@@ -26,6 +26,14 @@
             name_error.style.color="red";
             return false;
         }
+        if(first_name.trim()==="")
+         {
+         
+            name_error.innerHTML="First Name is should not be null";
+            name_error.style.color="red";
+            return false;
+
+          }
       else 
       {
         name_error.innerHTML="valid";
@@ -43,9 +51,17 @@
        var email_error = document.getElementById("email_error");
 
     //    var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-    var validRegex= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3}?)$/;
+       var validRegex= /^([A-Za-z0-9\.-]+)@([A-Za-z0-9\-]+).([a-z]{2,3})(.[a-z]{2,3}?)$/;
+      
+       if(email.trim()==="")
+       {
+       
+        email_error.innerHTML="Email should not be null";
+        email_error.style.color="red";
+          return false;
 
-
+        }
+      
        if (validRegex.test(email))
        {
            
@@ -56,7 +72,7 @@
       }
      else      
      {
-       console.log("inside else condition");
+       
         email_error.innerHTML="invalid";
         email_error.style.color="red";
         return false;
@@ -69,14 +85,25 @@
        var user_name=document.getElementById("username").value;
        var username_error=document.getElementById("username_error");
       
-       if(user_name.length==0){
 
+       if(user_name.trim()==="")
+       {
+       
+        username_error.innerHTML="User name should not be null";
+        username_error.style.color="red";
+          return false;
+
+        }
+
+       if(user_name.length==0)
+      {
         username_error.innerHTML="User Name is mandatory";
         username_error.style.color="red";
         return false;
-    }
+      }
 
-    if(!user_name.match(/^[A-za-z0-9\._@]+$/)){
+    if(!user_name.match(/^[A-za-z0-9\._@]+$/))
+    {
 
         username_error.innerHTML="User Name is not valid";
         username_error.innerHTML="only alphabets are allowed";
@@ -84,7 +111,8 @@
         return false;
 
     }
-    if(user_name.length>7){
+    if(user_name.length>7)
+    {
         username_error.innerHTML="User name should not be greater than 6 charater";
         username_error.style.color="red";
         return false;
@@ -98,6 +126,7 @@
    function CheckPasswordStrength(password) {
     var password_strength = document.getElementById("password_strength");
 
+ 
     //TextBox left blank.
     if (password.length == 0) {
         password_strength.innerHTML = "";
@@ -166,6 +195,17 @@ function validatePassword()
 
     var regexp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/ ;
 
+
+    if(password.trim()==="")
+    {
+    
+        password_error.innerHTML="Password should not be null";
+        password_error.style.color="red";
+       return false;
+
+     }
+
+
     if (regexp.test(password))
     {
         password_error.innerHTML="valid";
@@ -192,7 +232,14 @@ function validaterePassword(){
     var repassword =document.getElementById("confirmpwd").value;
     var confirmpwd_error =document.getElementById("confirmpwd_error");
 
+    if(repassword.trim()==="")
+    {
     
+        confirmpwd_error.innerHTML="Password should not be null";
+        confirmpwd_error.style.color="red";
+       return false;
+
+     }
      if(repassword=="")
      {
         confirmpwd_error.innerHTML=" Null value is not allowed";
@@ -215,12 +262,20 @@ function validaterePassword(){
 
 function validateContactno()
 {
-    var contactno = document.getElementById("contactno");
+    var contactno = document.getElementById("contactno"); 
     var contactno_error = document.getElementById("contactno_error");
 
     var regexpphoenum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
-    // var regexp= /^\d{10}$/;
-    
+
+       // var regexp= /^\d{10}$/;
+       if(contactno.value.trim()==="")
+       {
+       
+         contactno_error.innerHTML="Contact number should not be null";
+         contactno_error.style.color="red";
+          return false;
+   
+        }
              
     if (regexpphoenum.test(contactno.value))
         {
@@ -241,3 +296,7 @@ function validateContactno()
     
    }
     
+   function validation()
+   {
+     return true;
+   }
