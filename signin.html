@@ -52,7 +52,7 @@
     
         <div class="container col-sm-4" >
           <div class="column">
-            <form class="well form-horizontal" action="login.html"  id="contact_form" onsubmit="validation()">
+            <form class="well form-horizontal" action="login.html"  id="contact_form" >
         <fieldset>
         
         <!-- Form Name -->
@@ -64,7 +64,7 @@
              <label for="firstname">First Name</label>
           <div class="col-md-6 inputGroupContainer" >
             <div class="input-group">
-               <input type="text" required placeholder="Enter your Name" id="firstname" class="form-control" onkeydown="validateName()"> 
+               <input type="text" required placeholder="Enter your Name" id="firstname" class="form-control" onfocusout="validateName()"> 
             </div>
               <span id ="name_error"></span>
           </div>  
@@ -76,14 +76,14 @@
             <label for="email">E-Mail</label>
          <div class="col-md-6 inputGroupContainer" >
            <div class="input-group">
-              <input type="email" required placeholder="Enter your email" id="email" class="form-control" onkeydown="validateEmail()"> 
+              <input type="email" required placeholder="Enter your email" id="email" class="form-control" onfocusout="validateEmail()"> 
            </div>
              <span id ="email_error"></span>
          </div>  
        </div>
         <br>
 
-        <!-- Text input username-->
+        <!-- Text input username
         
         <div class="form-group">
           <label for="username">User Name</label>
@@ -94,7 +94,7 @@
            <span id ="username_error"></span>
        </div>  
      </div>
-      <br>
+      <br> -->
         
         <!-- Text input PASSWORD-->
                    
@@ -102,7 +102,7 @@
           <label for="password">Password </label> 
        <div class="col-md-6 inputGroupContainer" >
          <div class="input-group">
-            <input type="password" required placeholder="Enter password" id="password" class="form-control" onkeyup="CheckPasswordStrength(this.value)" onkeydown="validatePassword()"> 
+            <input type="password" required placeholder="Enter password" id="password" class="form-control" onkeyup="CheckPasswordStrength(this.value)" onfocusout="validatePassword()"> 
          </div>
                              
                 <span id="password_strength"></span>
@@ -140,13 +140,14 @@
         <!-- Select Basic -->
         
         <!-- Success message -->
-        <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
+        <!-- <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div> -->
         
         <!-- Button -->
         <div class="form-group pb-3">
           <label class="col-md-6 control-label"></label>
           <div class="col-md-6"><br>
-          <button type="submit" class="btn btn-warning" >SUBMIT <span class="glyphicon glyphicon-send"></span></button>
+          <!-- <button type="submit" class="btn btn-warning" >SUBMIT <span class="glyphicon glyphicon-send"></span></button> -->
+          <button type="submit" class="btn btn-warning" id="btn">SUBMIT </button>
           </div>
         </div>
         

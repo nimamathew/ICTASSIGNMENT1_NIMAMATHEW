@@ -48,14 +48,15 @@
   <!--Navbar ending-->
   
   <!--login starts-->
+  <br>
   <div class="container col-sm-4" >
     <div class="column">
 
-  <form style="margin: 2ex; width: 390px;" action="index.html" onsubmit="validation()" >
+  <form style="margin: 2ex; width: 390px;" action="index.html"  >
     <div class="col-auto">
    
       <label for="exampleInputEmail1" class="form-label">Email address</label>
-      <input type="email" required class="form-control" id="email" placeholder="enter your email address" onkeydown="validateEmail()">
+      <input type="email" required class="form-control" id="email" placeholder="enter your email address" onfocusout="validateEmail()">
       <div>
       <span id ="email_error"></span>
       <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
@@ -64,20 +65,24 @@
     <br>
     <div class="col-auto">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" required class="form-control" id="password" placeholder="password" onkeydown="validatePassword()">
+      <input type="password" required class="form-control" id="loginpassword" placeholder="password" onfocusout="loginvalidatePassword()">
 
-      <span id ="password_error"></span>
+      <span id ="loginpassword_error"></span>
     </div>
   <br>
-    <!-- <div class="col-auto">
-      <input type="checkbox" class="form-check-input" id="exampleCheck1">
-      <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div> -->
+   
     <br>
     <div class="d-grid col-6 mx-auto p-3">
-      <!-- <button class="btn btn-primary" id="submit" type="button">Submitt</button> -->
-      <button type="submit" class="btn btn-warning" >SUBMIT <span class="glyphicon glyphicon-send"></span></button>
+    
+      <!-- <button type="submit" class="btn btn-warning" >SUBMIT <span class="glyphicon glyphicon-send"></span></button> -->
+      <button type="submit" class="btn btn-warning" id="loginbtn">SUBMIT </button>
+    
       </div>
+
+      <div class="login-misc">
+        <h5>Need an account?</h5>
+        <a href="signin.html">Sign Up</a>
+    </div>
   </form>
     </div>
     </div>

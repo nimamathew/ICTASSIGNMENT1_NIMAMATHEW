@@ -81,47 +81,47 @@
    }
 
 
-   function validateUserName(){
-       var user_name=document.getElementById("username").value;
-       var username_error=document.getElementById("username_error");
+//    function validateUserName(){
+//        var user_name=document.getElementById("username").value;
+//        var username_error=document.getElementById("username_error");
       
 
-       if(user_name.trim()==="")
-       {
+//        if(user_name.trim()==="")
+//        {
        
-        username_error.innerHTML="User name should not be null";
-        username_error.style.color="red";
-          return false;
+//         username_error.innerHTML="User name should not be null";
+//         username_error.style.color="red";
+//           return false;
 
-        }
+//         }
 
-       if(user_name.length==0)
-      {
-        username_error.innerHTML="User Name is mandatory";
-        username_error.style.color="red";
-        return false;
-      }
+//        if(user_name.length==0)
+//       {
+//         username_error.innerHTML="User Name is mandatory";
+//         username_error.style.color="red";
+//         return false;
+//       }
 
-    if(!user_name.match(/^[A-za-z0-9\._@]+$/))
-    {
+//     if(!user_name.match(/^[A-za-z0-9\._@]+$/))
+//     {
 
-        username_error.innerHTML="User Name is not valid";
-        username_error.innerHTML="only alphabets are allowed";
-        username_error.style.color="red";
-        return false;
+//         username_error.innerHTML="User Name is not valid";
+//         username_error.innerHTML="only alphabets are allowed";
+//         username_error.style.color="red";
+//         return false;
 
-    }
-    if(user_name.length>7)
-    {
-        username_error.innerHTML="User name should not be greater than 6 charater";
-        username_error.style.color="red";
-        return false;
-    }
+//     }
+//     if(user_name.length>7)
+//     {
+//         username_error.innerHTML="User name should not be greater than 6 charater";
+//         username_error.style.color="red";
+//         return false;
+//     }
     
-    username_error.innerHTML="valid";
-    username_error.style.color="green";
-    return true;
-   }
+//     username_error.innerHTML="valid";
+//     username_error.style.color="green";
+//     return true;
+//    }
 
    function CheckPasswordStrength(password) {
     var password_strength = document.getElementById("password_strength");
@@ -295,8 +295,97 @@ function validateContactno()
     
     
    }
-    
-   function validation()
+
+  
+   function loginvalidatePassword()
    {
-     return true;
+    var loginpassword = document.getElementById("loginpassword").value;
+   
+    var loginpassword_error =document.getElementById("loginpassword_error");
+
+    var regexp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/ ;
+    
+      
+
+     if(loginpassword.trim()==="")
+    {
+    
+        loginpassword_error.innerHTML="Password should not be null";
+        loginpassword_error.style.color="red";
+        return false;
+
+     }
+    
+   if(loginpassword.length > 8)
+   {
+        loginpassword_error.innerHTML="More than 8 characters not allowed";
+        loginpassword_error.style.color="red";
+        return false;
+        
+    }
+
+    if (regexp.test(loginpassword))
+    {
+        loginpassword_error.innerHTML="valid";
+        loginpassword_error.style.color="green";
+        return true;
+
+    }
+        
+   else 
+   {
+    loginpassword_error.innerHTML="Password is not valid";
+    loginpassword_error.innerHTML=" Atleast one uppercase,One lowercase and atleast one number must contain";
+    loginpassword_error.style.color="red";
+    return false;
+    }
+
+    
+    
    }
+   
+// console.log(loginvalidatePassword());
+//    form.addEventListener("focusin", () => form.classList.add('focused'));
+
+
+
+
+btn.addEventListener('click', function (event) 
+{
+
+ if (!validateName()) {
+    
+     event.preventDefault();
+ }
+ if (!validateEmail()) {
+    
+    event.preventDefault();
+}
+if (!validatePassword()) {
+    
+    event.preventDefault();
+}
+if (!validaterePassword()) {
+    
+    event.preventDefault();
+}
+if (!validateContactno()) {
+    
+    event.preventDefault();
+}
+});
+
+
+loginbtn.addEventListener('click', function (event) 
+   {
+   
+    if (!validateEmail()) {
+       
+        event.preventDefault();
+    }
+    if (!loginvalidatePassword()) {
+       
+        event.preventDefault();
+    }
+   });
+   
