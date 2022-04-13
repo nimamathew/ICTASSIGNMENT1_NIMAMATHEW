@@ -201,28 +201,34 @@ function validatePassword()
     
         password_error.innerHTML="Password should not be null";
         password_error.style.color="red";
-       return false;
+        return false;
 
      }
+     console.log(password);
+     console.log(password.length);
+     if(password.length > 8)
+     {
+        password_error.innerHTML="More than 8 characters not allowed";
+        password_error.style.color="red";
+        return false;
+        
+     } 
+    
 
-
-    if (regexp.test(password))
+  if (regexp.test(password))
     {
         password_error.innerHTML="valid";
         password_error.style.color="green";
         return true;
 
     }
-    if(password.length > 8){
-        password_error.innerHTML="More than 8 characters not allowed";
-        password_error.style.color="red";
-        return false;
-        
-    }
+    else 
+    {
     password_error.innerHTML="Password is not valid";
-    password_error.innerHTML=" Atleast one uppercase,One lowercase and atleast one number must contain";
+    password_error.innerHTML=" Atleast one uppercase,One lowercase and <br> atleast one number must contain";
     password_error.style.color="red";
     return false;
+    }
 }
 //    PASSWORD
 //    "^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
@@ -287,7 +293,7 @@ function validateContactno()
        
      else {
             contactno_error.innerHTML="format is not correct";
-            contactno_error.innerHTML="contact number should be in one of the  XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX format";
+            contactno_error.innerHTML="contact number should be in one of the format<br>  XXX-XXX-XXXX, XXX.XXX.XXXX, XXX XXX XXXX ";
             
             contactno_error.style.color="red";
             return false;
@@ -297,52 +303,52 @@ function validateContactno()
    }
 
   
-   function loginvalidatePassword()
-   {
-    var loginpassword = document.getElementById("loginpassword").value;
+//    function loginvalidatePassword()
+//    {
+//     var loginpassword = document.getElementById("loginpassword").value;
    
-    var loginpassword_error =document.getElementById("loginpassword_error");
+//     var loginpassword_error =document.getElementById("loginpassword_error");
 
-    var regexp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/ ;
+//     var regexp=/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$/ ;
     
       
 
-     if(loginpassword.trim()==="")
-    {
+//      if(loginpassword.trim()==="")
+//     {
     
-        loginpassword_error.innerHTML="Password should not be null";
-        loginpassword_error.style.color="red";
-        return false;
+//         loginpassword_error.innerHTML="Password should not be null";
+//         loginpassword_error.style.color="red";
+//         return false;
 
-     }
+//      }
     
-   if(loginpassword.length > 8)
-   {
-        loginpassword_error.innerHTML="More than 8 characters not allowed";
-        loginpassword_error.style.color="red";
-        return false;
+//    if(loginpassword.length > 8)
+//    {
+//         loginpassword_error.innerHTML="More than 8 characters not allowed";
+//         loginpassword_error.style.color="red";
+//         return false;
         
-    }
+//     }
 
-    if (regexp.test(loginpassword))
-    {
-        loginpassword_error.innerHTML="valid";
-        loginpassword_error.style.color="green";
-        return true;
+//     if (regexp.test(loginpassword))
+//     {
+//         loginpassword_error.innerHTML="valid";
+//         loginpassword_error.style.color="green";
+//         return true;
 
-    }
+//     }
         
-   else 
-   {
-    loginpassword_error.innerHTML="Password is not valid";
-    loginpassword_error.innerHTML=" Atleast one uppercase,One lowercase and atleast one number must contain";
-    loginpassword_error.style.color="red";
-    return false;
-    }
+//    else 
+//    {
+//     loginpassword_error.innerHTML="Password is not valid";
+//     loginpassword_error.innerHTML=" Atleast one uppercase,One lowercase <br>and atleast one number must contain";
+//     loginpassword_error.style.color="red";
+//     return false;
+//     }
 
     
     
-   }
+//    }
    
 // console.log(loginvalidatePassword());
 //    form.addEventListener("focusin", () => form.classList.add('focused'));
@@ -383,8 +389,8 @@ loginbtn.addEventListener('click', function (event)
        
         event.preventDefault();
     }
-    if (!loginvalidatePassword()) {
-       
+    if (!validatePassword()) {
+    
         event.preventDefault();
     }
    });

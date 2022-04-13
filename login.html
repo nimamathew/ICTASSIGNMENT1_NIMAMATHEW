@@ -52,7 +52,7 @@
   <div class="container col-sm-4" >
     <div class="column">
 
-  <form style="margin: 2ex; width: 390px;" action="index.html"  >
+  <form style="margin: 2ex; width: 390px;" action="index.html" id="contact_form">
     <div class="col-auto">
    
       <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -65,16 +65,15 @@
     <br>
     <div class="col-auto">
       <label for="exampleInputPassword1" class="form-label">Password</label>
-      <input type="password" required class="form-control" id="loginpassword" placeholder="password" onfocusout="loginvalidatePassword()">
+      <input type="password" required class="form-control" id="password" placeholder="password" onfocusout="validatePassword()">
 
-      <span id ="loginpassword_error"></span>
+      <span id ="password_error"></span>
     </div>
   <br>
    
     <br>
     <div class="d-grid col-6 mx-auto p-3">
-    
-      <!-- <button type="submit" class="btn btn-warning" >SUBMIT <span class="glyphicon glyphicon-send"></span></button> -->
+       <!-- <button type="submit" class="btn btn-warning" >SUBMIT <span class="glyphicon glyphicon-send"></span></button> -->
       <button type="submit" class="btn btn-warning" id="loginbtn">SUBMIT </button>
     
       </div>
